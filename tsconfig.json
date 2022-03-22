@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
     "declaration": true,
     "target": "es6",
     "module": "commonjs",
     "noImplicitAny": true,
     "outDir": "dist",
-    "rootDir": ".",
+    "rootDir": "src",
     "typeRoots": [
       "node_modules/@types"
     ]
