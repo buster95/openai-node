@@ -12,17 +12,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.OpenAIApi = exports.OpenAIApiFactory = exports.OpenAIApiFp = exports.OpenAIApiAxiosParamCreator = void 0;
+const tslib_1 = require("tslib");
 const axios_1 = require("axios");
 // Some imports not used depending on template conditions
 // @ts-ignore
@@ -42,7 +34,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        cancelFineTune: (fineTuneId, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        cancelFineTune: (fineTuneId, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'fineTuneId' is not null or undefined
             common_1.assertParamExists('cancelFineTune', 'fineTuneId', fineTuneId);
             const localVarPath = `/fine-tunes/{fine_tune_id}/cancel`
@@ -71,7 +63,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createAnswer: (createAnswerRequest, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        createAnswer: (createAnswerRequest, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'createAnswerRequest' is not null or undefined
             common_1.assertParamExists('createAnswer', 'createAnswerRequest', createAnswerRequest);
             const localVarPath = `/answers`;
@@ -101,7 +93,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createClassification: (createClassificationRequest, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        createClassification: (createClassificationRequest, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'createClassificationRequest' is not null or undefined
             common_1.assertParamExists('createClassification', 'createClassificationRequest', createClassificationRequest);
             const localVarPath = `/classifications`;
@@ -132,7 +124,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createCompletion: (engineId, createCompletionRequest, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        createCompletion: (engineId, createCompletionRequest, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'engineId' is not null or undefined
             common_1.assertParamExists('createCompletion', 'engineId', engineId);
             // verify required parameter 'createCompletionRequest' is not null or undefined
@@ -165,7 +157,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createCompletionFromModel: (createCompletionFromModelRequest, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        createCompletionFromModel: (createCompletionFromModelRequest, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'createCompletionFromModelRequest' is not null or undefined
             common_1.assertParamExists('createCompletionFromModel', 'createCompletionFromModelRequest', createCompletionFromModelRequest);
             const localVarPath = `/completions`;
@@ -196,7 +188,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createEdit: (engineId, createEditRequest, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        createEdit: (engineId, createEditRequest, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'engineId' is not null or undefined
             common_1.assertParamExists('createEdit', 'engineId', engineId);
             // verify required parameter 'createEditRequest' is not null or undefined
@@ -230,7 +222,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createEmbedding: (engineId, createEmbeddingRequest, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        createEmbedding: (engineId, createEmbeddingRequest, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'engineId' is not null or undefined
             common_1.assertParamExists('createEmbedding', 'engineId', engineId);
             // verify required parameter 'createEmbeddingRequest' is not null or undefined
@@ -264,7 +256,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createFile: (file, purpose, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        createFile: (file, purpose, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'file' is not null or undefined
             common_1.assertParamExists('createFile', 'file', file);
             // verify required parameter 'purpose' is not null or undefined
@@ -303,7 +295,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createFineTune: (createFineTuneRequest, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        createFineTune: (createFineTuneRequest, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'createFineTuneRequest' is not null or undefined
             common_1.assertParamExists('createFineTune', 'createFineTuneRequest', createFineTuneRequest);
             const localVarPath = `/fine-tunes`;
@@ -334,7 +326,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createSearch: (engineId, createSearchRequest, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        createSearch: (engineId, createSearchRequest, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'engineId' is not null or undefined
             common_1.assertParamExists('createSearch', 'engineId', engineId);
             // verify required parameter 'createSearchRequest' is not null or undefined
@@ -367,7 +359,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteFile: (fileId, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        deleteFile: (fileId, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'fileId' is not null or undefined
             common_1.assertParamExists('deleteFile', 'fileId', fileId);
             const localVarPath = `/files/{file_id}`
@@ -396,7 +388,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteModel: (model, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        deleteModel: (model, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'model' is not null or undefined
             common_1.assertParamExists('deleteModel', 'model', model);
             const localVarPath = `/models/{model}`
@@ -425,7 +417,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        downloadFile: (fileId, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        downloadFile: (fileId, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'fileId' is not null or undefined
             common_1.assertParamExists('downloadFile', 'fileId', fileId);
             const localVarPath = `/files/{file_id}/content`
@@ -453,7 +445,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listEngines: (options = {}) => __awaiter(this, void 0, void 0, function* () {
+        listEngines: (options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const localVarPath = `/engines`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
@@ -478,7 +470,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listFiles: (options = {}) => __awaiter(this, void 0, void 0, function* () {
+        listFiles: (options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const localVarPath = `/files`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
@@ -505,7 +497,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listFineTuneEvents: (fineTuneId, stream, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        listFineTuneEvents: (fineTuneId, stream, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'fineTuneId' is not null or undefined
             common_1.assertParamExists('listFineTuneEvents', 'fineTuneId', fineTuneId);
             const localVarPath = `/fine-tunes/{fine_tune_id}/events`
@@ -536,7 +528,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listFineTunes: (options = {}) => __awaiter(this, void 0, void 0, function* () {
+        listFineTunes: (options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const localVarPath = `/fine-tunes`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, common_1.DUMMY_BASE_URL);
@@ -562,7 +554,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveEngine: (engineId, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        retrieveEngine: (engineId, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'engineId' is not null or undefined
             common_1.assertParamExists('retrieveEngine', 'engineId', engineId);
             const localVarPath = `/engines/{engine_id}`
@@ -591,7 +583,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveFile: (fileId, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        retrieveFile: (fileId, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'fileId' is not null or undefined
             common_1.assertParamExists('retrieveFile', 'fileId', fileId);
             const localVarPath = `/files/{file_id}`
@@ -620,7 +612,7 @@ exports.OpenAIApiAxiosParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retrieveFineTune: (fineTuneId, options = {}) => __awaiter(this, void 0, void 0, function* () {
+        retrieveFineTune: (fineTuneId, options = {}) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // verify required parameter 'fineTuneId' is not null or undefined
             common_1.assertParamExists('retrieveFineTune', 'fineTuneId', fineTuneId);
             const localVarPath = `/fine-tunes/{fine_tune_id}`
@@ -659,7 +651,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         cancelFineTune(fineTuneId, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.cancelFineTune(fineTuneId, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -672,7 +664,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         createAnswer(createAnswerRequest, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.createAnswer(createAnswerRequest, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -685,7 +677,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         createClassification(createClassificationRequest, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.createClassification(createClassificationRequest, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -699,7 +691,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         createCompletion(engineId, createCompletionRequest, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.createCompletion(engineId, createCompletionRequest, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -712,7 +704,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         createCompletionFromModel(createCompletionFromModelRequest, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.createCompletionFromModel(createCompletionFromModelRequest, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -726,7 +718,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         createEdit(engineId, createEditRequest, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.createEdit(engineId, createEditRequest, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -740,7 +732,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         createEmbedding(engineId, createEmbeddingRequest, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.createEmbedding(engineId, createEmbeddingRequest, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -754,7 +746,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         createFile(file, purpose, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.createFile(file, purpose, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -767,7 +759,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         createFineTune(createFineTuneRequest, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.createFineTune(createFineTuneRequest, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -781,7 +773,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         createSearch(engineId, createSearchRequest, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.createSearch(engineId, createSearchRequest, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -794,7 +786,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         deleteFile(fileId, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.deleteFile(fileId, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -807,7 +799,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         deleteModel(model, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.deleteModel(model, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -820,7 +812,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         downloadFile(fileId, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.downloadFile(fileId, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -832,7 +824,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         listEngines(options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.listEngines(options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -844,7 +836,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         listFiles(options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.listFiles(options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -858,7 +850,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         listFineTuneEvents(fineTuneId, stream, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.listFineTuneEvents(fineTuneId, stream, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -870,7 +862,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         listFineTunes(options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.listFineTunes(options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -883,7 +875,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         retrieveEngine(engineId, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.retrieveEngine(engineId, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -896,7 +888,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         retrieveFile(fileId, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.retrieveFile(fileId, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });
@@ -909,7 +901,7 @@ exports.OpenAIApiFp = function (configuration) {
          * @throws {RequiredError}
          */
         retrieveFineTune(fineTuneId, options) {
-            return __awaiter(this, void 0, void 0, function* () {
+            return tslib_1.__awaiter(this, void 0, void 0, function* () {
                 const localVarAxiosArgs = yield localVarAxiosParamCreator.retrieveFineTune(fineTuneId, options);
                 return common_1.createRequestFunction(localVarAxiosArgs, axios_1.default, base_1.BASE_PATH, configuration);
             });

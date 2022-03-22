@@ -12,17 +12,9 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createRequestFunction = exports.toPathString = exports.serializeDataIfNeeded = exports.setSearchParams = exports.setOAuthToObject = exports.setBearerAuthToObject = exports.setBasicAuthToObject = exports.setApiKeyToObject = exports.assertParamExists = exports.DUMMY_BASE_URL = void 0;
+const tslib_1 = require("tslib");
 const base_1 = require("./base");
 /**
  *
@@ -44,7 +36,7 @@ exports.assertParamExists = function (functionName, paramName, paramValue) {
  * @export
  */
 exports.setApiKeyToObject = function (object, keyParamName, configuration) {
-    return __awaiter(this, void 0, void 0, function* () {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
         if (configuration && configuration.apiKey) {
             const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                 ? yield configuration.apiKey(keyParamName)
@@ -67,7 +59,7 @@ exports.setBasicAuthToObject = function (object, configuration) {
  * @export
  */
 exports.setBearerAuthToObject = function (object, configuration) {
-    return __awaiter(this, void 0, void 0, function* () {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
         if (configuration && configuration.accessToken) {
             const accessToken = typeof configuration.accessToken === 'function'
                 ? yield configuration.accessToken()
@@ -81,7 +73,7 @@ exports.setBearerAuthToObject = function (object, configuration) {
  * @export
  */
 exports.setOAuthToObject = function (object, name, scopes, configuration) {
-    return __awaiter(this, void 0, void 0, function* () {
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
         if (configuration && configuration.accessToken) {
             const localVarAccessTokenValue = typeof configuration.accessToken === 'function'
                 ? yield configuration.accessToken(name, scopes)

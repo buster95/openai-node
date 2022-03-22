@@ -1301,7 +1301,7 @@ export interface OpenAIFile {
  * OpenAIApi - axios parameter creator
  * @export
  */
-export declare const OpenAIApiAxiosParamCreator: (configuration?: Configuration) => {
+export declare const OpenAIApiAxiosParamCreator: (configuration?: Configuration | undefined) => {
     /**
      *
      * @summary Immediately cancel a fine-tune job.
@@ -1433,7 +1433,7 @@ export declare const OpenAIApiAxiosParamCreator: (configuration?: Configuration)
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listFineTuneEvents: (fineTuneId: string, stream?: boolean, options?: AxiosRequestConfig) => Promise<RequestArgs>;
+    listFineTuneEvents: (fineTuneId: string, stream?: boolean | undefined, options?: AxiosRequestConfig) => Promise<RequestArgs>;
     /**
      *
      * @summary List your organization\'s fine-tuning jobs
@@ -1470,7 +1470,7 @@ export declare const OpenAIApiAxiosParamCreator: (configuration?: Configuration)
  * OpenAIApi - functional programming interface
  * @export
  */
-export declare const OpenAIApiFp: (configuration?: Configuration) => {
+export declare const OpenAIApiFp: (configuration?: Configuration | undefined) => {
     /**
      *
      * @summary Immediately cancel a fine-tune job.
@@ -1478,7 +1478,7 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    cancelFineTune(fineTuneId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FineTune>>;
+    cancelFineTune(fineTuneId: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<FineTune>>;
     /**
      *
      * @summary Answers the specified question using the provided documents and examples.  The endpoint first [searches](/docs/api-reference/searches) over provided documents or files to find relevant context. The relevant context is combined with the provided examples and question to create the prompt for [completion](/docs/api-reference/completions).
@@ -1486,7 +1486,7 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createAnswer(createAnswerRequest: CreateAnswerRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateAnswerResponse>>;
+    createAnswer(createAnswerRequest: CreateAnswerRequest, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<CreateAnswerResponse>>;
     /**
      *
      * @summary Classifies the specified `query` using provided examples.  The endpoint first [searches](/docs/api-reference/searches) over the labeled examples to select the ones most relevant for the particular query. Then, the relevant examples are combined with the query to construct a prompt to produce the final label via the [completions](/docs/api-reference/completions) endpoint.  Labeled examples can be provided via an uploaded `file`, or explicitly listed in the request using the `examples` parameter for quick tests and small scale use cases.
@@ -1494,7 +1494,7 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createClassification(createClassificationRequest: CreateClassificationRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateClassificationResponse>>;
+    createClassification(createClassificationRequest: CreateClassificationRequest, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<CreateClassificationResponse>>;
     /**
      *
      * @summary Creates a new completion for the provided prompt and parameters
@@ -1503,7 +1503,7 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createCompletion(engineId: string, createCompletionRequest: CreateCompletionRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateCompletionResponse>>;
+    createCompletion(engineId: string, createCompletionRequest: CreateCompletionRequest, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<CreateCompletionResponse>>;
     /**
      *
      * @summary Creates a completion using a fine-tuned model
@@ -1511,7 +1511,7 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createCompletionFromModel(createCompletionFromModelRequest: CreateCompletionFromModelRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateCompletionResponse>>;
+    createCompletionFromModel(createCompletionFromModelRequest: CreateCompletionFromModelRequest, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<CreateCompletionResponse>>;
     /**
      *
      * @summary Creates a new edit for the provided input, instruction, and parameters
@@ -1520,7 +1520,7 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createEdit(engineId: string, createEditRequest: CreateEditRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateEditResponse>>;
+    createEdit(engineId: string, createEditRequest: CreateEditRequest, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<CreateEditResponse>>;
     /**
      *
      * @summary Creates an embedding vector representing the input text.
@@ -1529,7 +1529,7 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createEmbedding(engineId: string, createEmbeddingRequest: CreateEmbeddingRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateEmbeddingResponse>>;
+    createEmbedding(engineId: string, createEmbeddingRequest: CreateEmbeddingRequest, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<CreateEmbeddingResponse>>;
     /**
      *
      * @summary Upload a file that contains document(s) to be used across various endpoints/features. Currently, the size of all the files uploaded by one organization can be up to 1 GB. Please contact us if you need to increase the storage limit.
@@ -1538,7 +1538,7 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createFile(file: any, purpose: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OpenAIFile>>;
+    createFile(file: any, purpose: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<OpenAIFile>>;
     /**
      *
      * @summary Creates a job that fine-tunes a specified model from a given dataset.  Response includes details of the enqueued job including job status and the name of the fine-tuned models once complete.  [Learn more about Fine-tuning](/docs/guides/fine-tuning)
@@ -1546,7 +1546,7 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createFineTune(createFineTuneRequest: CreateFineTuneRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FineTune>>;
+    createFineTune(createFineTuneRequest: CreateFineTuneRequest, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<FineTune>>;
     /**
      *
      * @summary The search endpoint computes similarity scores between provided query and documents. Documents can be passed directly to the API if there are no more than 200 of them.  To go beyond the 200 document limit, documents can be processed offline and then used for efficient retrieval at query time. When `file` is set, the search endpoint searches over all the documents in the given file and returns up to the `max_rerank` number of documents. These documents will be returned along with their search scores.  The similarity score is a positive score that usually ranges from 0 to 300 (but can sometimes go higher), where a score above 200 usually means the document is semantically similar to the query.
@@ -1555,7 +1555,7 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    createSearch(engineId: string, createSearchRequest: CreateSearchRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<CreateSearchResponse>>;
+    createSearch(engineId: string, createSearchRequest: CreateSearchRequest, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<CreateSearchResponse>>;
     /**
      *
      * @summary Delete a file.
@@ -1563,7 +1563,7 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteFile(fileId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DeleteFileResponse>>;
+    deleteFile(fileId: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<DeleteFileResponse>>;
     /**
      *
      * @summary Delete a fine-tuned model. You must have the Owner role in your organization.
@@ -1571,7 +1571,7 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteModel(model: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<DeleteModelResponse>>;
+    deleteModel(model: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<DeleteModelResponse>>;
     /**
      *
      * @summary Returns the contents of the specified file
@@ -1579,21 +1579,21 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    downloadFile(fileId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>>;
+    downloadFile(fileId: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<string>>;
     /**
      *
      * @summary Lists the currently available engines, and provides basic information about each one such as the owner and availability.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listEngines(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListEnginesResponse>>;
+    listEngines(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<ListEnginesResponse>>;
     /**
      *
      * @summary Returns a list of files that belong to the user\'s organization.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listFiles(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListFilesResponse>>;
+    listFiles(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<ListFilesResponse>>;
     /**
      *
      * @summary Get fine-grained status updates for a fine-tune job.
@@ -1602,14 +1602,14 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listFineTuneEvents(fineTuneId: string, stream?: boolean, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListFineTuneEventsResponse>>;
+    listFineTuneEvents(fineTuneId: string, stream?: boolean | undefined, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<ListFineTuneEventsResponse>>;
     /**
      *
      * @summary List your organization\'s fine-tuning jobs
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listFineTunes(options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ListFineTunesResponse>>;
+    listFineTunes(options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<ListFineTunesResponse>>;
     /**
      *
      * @summary Retrieves an engine instance, providing basic information about the engine such as the owner and availability.
@@ -1617,7 +1617,7 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    retrieveEngine(engineId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Engine>>;
+    retrieveEngine(engineId: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<Engine>>;
     /**
      *
      * @summary Returns information about a specific file.
@@ -1625,7 +1625,7 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    retrieveFile(fileId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OpenAIFile>>;
+    retrieveFile(fileId: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<OpenAIFile>>;
     /**
      *
      * @summary Gets info about the fine-tune job.  [Learn more about Fine-tuning](/docs/guides/fine-tuning)
@@ -1633,13 +1633,13 @@ export declare const OpenAIApiFp: (configuration?: Configuration) => {
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    retrieveFineTune(fineTuneId: string, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FineTune>>;
+    retrieveFineTune(fineTuneId: string, options?: AxiosRequestConfig<any> | undefined): Promise<(axios?: AxiosInstance | undefined, basePath?: string | undefined) => AxiosPromise<FineTune>>;
 };
 /**
  * OpenAIApi - factory interface
  * @export
  */
-export declare const OpenAIApiFactory: (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) => {
+export declare const OpenAIApiFactory: (configuration?: Configuration | undefined, basePath?: string | undefined, axios?: AxiosInstance | undefined) => {
     /**
      *
      * @summary Immediately cancel a fine-tune job.
@@ -1771,7 +1771,7 @@ export declare const OpenAIApiFactory: (configuration?: Configuration, basePath?
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    listFineTuneEvents(fineTuneId: string, stream?: boolean, options?: any): AxiosPromise<ListFineTuneEventsResponse>;
+    listFineTuneEvents(fineTuneId: string, stream?: boolean | undefined, options?: any): AxiosPromise<ListFineTuneEventsResponse>;
     /**
      *
      * @summary List your organization\'s fine-tuning jobs
